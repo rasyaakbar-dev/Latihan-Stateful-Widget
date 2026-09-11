@@ -33,19 +33,22 @@ class _LatradiobuttonState extends State<Latradiobutton> {
                 });
               },
               child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    ListTile(
-                      title: const Text('Laki-laki'),
-                      leading: const Radio<Gender>(value: Gender.pria),
-                    ),
-                    ListTile(
-                      title: const Text('Perempuan'),
-                      leading: const Radio<Gender>(value: Gender.wanita),
-                    ),
-                  ],
+                child: Padding(
+                  padding: EdgeInsetsGeometry.fromLTRB(400, 0, 400, 0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      ListTile(
+                        title: const Text('Laki-laki'),
+                        leading: const Radio<Gender>(value: Gender.pria),
+                      ),
+                      ListTile(
+                        title: const Text('Perempuan'),
+                        leading: const Radio<Gender>(value: Gender.wanita),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

@@ -12,12 +12,14 @@ class _LattextbuttonState extends State<Lattextbutton> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Latihan Tombol Text')),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          TextButton(onPressed: () {}, child: const Text("Button Label")),
-        ],
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            TextButton(onPressed: () {}, child: const Text("Label Tombol")),
+          ],
+        ),
       ),
     );
   }

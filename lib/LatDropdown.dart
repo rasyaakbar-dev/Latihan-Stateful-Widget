@@ -16,23 +16,25 @@ class _LatdropdownState extends State<Latdropdown> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Latihan Dropdown')),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          DropdownMenu(
-            initialSelection: list.first,
-            onSelected: (String? value) {
-              // This is called when the user selects an item.
-              setState(() {
-                dropdownValue = value!;
-              });
-            },
-            dropdownMenuEntries: list
-                .map((value) => DropdownMenuEntry(value: value, label: value))
-                .toList(),
-          ),
-        ],
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            DropdownMenu(
+              initialSelection: list.first,
+              onSelected: (String? value) {
+                // This is called when the user selects an item.
+                setState(() {
+                  dropdownValue = value!;
+                });
+              },
+              dropdownMenuEntries: list
+                  .map((value) => DropdownMenuEntry(value: value, label: value))
+                  .toList(),
+            ),
+          ],
+        ),
       ),
     );
   }

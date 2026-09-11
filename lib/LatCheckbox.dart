@@ -15,27 +15,32 @@ class _LatCheckboxState extends State<Latcheckbox> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Latihan Checkbox')),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Checkbox(
-            value: isChecked,
-            onChanged: (bool? value) {
-              setState(() {
-                isChecked = value!;
-              });
-            },
-          ),
-          Checkbox(
-            value: isChecked2,
-            onChanged: (bool? value) {
-              setState(() {
-                isChecked2 = value!;
-              });
-            },
-          ),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const Text('Checkbox 1'),
+            Checkbox(
+              value: isChecked,
+              onChanged: (bool? value) {
+                setState(() {
+                  isChecked = value!;
+                });
+              },
+            ),
+            SizedBox(height: 20),
+            const Text('Checkbox 2'),
+            Checkbox(
+              value: isChecked2,
+              onChanged: (bool? value) {
+                setState(() {
+                  isChecked2 = value!;
+                });
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
