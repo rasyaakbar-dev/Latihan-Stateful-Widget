@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Latcheckbox extends StatefulWidget {
-  const new({super.key});
+  const Latcheckbox({super.key});
 
   @override
   State<Latcheckbox> createState() => _LatCheckboxState();
